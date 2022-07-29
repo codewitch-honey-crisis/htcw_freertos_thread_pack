@@ -1,0 +1,52 @@
+{
+    "name": "htcw_freertos_thread_pack",
+    "version": "0.1.0",
+    "description": "Provides support for simple threading using FreeRTOS",
+    "keywords": ["thread","threading","message","queue"],
+    "authors": {
+        "name":"honey the codewitch",
+        "homepage": "https://www.codeproject.com/Members/code-witch"
+    },
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/codewitch-honey-crisis/htcw_freertos_thread_pack.git"
+    },
+    "examples": [
+        {
+            "name": "Thread",
+            "base": "examples/thread",
+            "files": [
+                "platformio.ini",
+                "src/main.cpp"
+            ]
+        },
+        {
+            "name": "Message Queue",
+            "base": "examples/message_queue",
+            "files": [
+                "platformio.ini",
+                "src/main.cpp"
+            ]
+        },
+        {
+            "name": "Synchronization Context",
+            "base": "examples/synchronization_context",
+            "files": [
+                "platformio.ini",
+                "src/main.cpp"
+            ]
+        },
+        {
+            "name": "Thread Pool",
+            "base": "examples/thread_pool",
+            "files": [
+                "platformio.ini",
+                "src/main.cpp"
+            ]
+        }
+    ]
+}
