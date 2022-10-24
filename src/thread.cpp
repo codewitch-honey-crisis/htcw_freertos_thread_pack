@@ -84,6 +84,9 @@ thread thread::current(int cpu) {
     return result;
 }
 #endif
+void* thread::handle() const {
+    return m_handle;
+}
 thread thread::create(void(*fn)(void*),void* state,int priority,size_t stack_word_size) {
     TaskHandle_t handle = nullptr;
     entry_thunk thunk;

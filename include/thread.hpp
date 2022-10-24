@@ -46,6 +46,7 @@ public:
     bool abort();
     bool suspend();
     bool running() const; 
+    void* handle() const;
     static thread create(void(*fn)(void*),void* state=nullptr,int priority=1,size_t stack_word_size=1000);
 #ifdef ESP32
     static thread create_affinity(int cpu,void(*fn)(void*),void* state=nullptr,int priority=1,size_t stack_word_size=1000);
