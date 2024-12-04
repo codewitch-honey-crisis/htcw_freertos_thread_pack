@@ -100,7 +100,7 @@ thread thread::create(void(*fn)(void*),void* state,int priority,size_t stack_wor
     }
     return result;
 }
-#ifdef ESP32
+#ifdef ESP_PLATFORM
 thread thread::create_affinity(int cpu,void(*fn)(void*),void* state,int priority,size_t stack_word_size) {
     TaskHandle_t handle = nullptr;
     entry_thunk thunk;

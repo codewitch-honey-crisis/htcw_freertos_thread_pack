@@ -30,16 +30,16 @@ public:
     }
     void sleep(size_t ms);
     static thread current();
-#ifdef ESP32
+#ifdef ESP_PLATFORM
     static thread current(int cpu);
 #endif
     static thread idle();
-#ifdef ESP32
+#ifdef ESP_PLATFORM
     static thread idle(int cpu);
 #endif
     int priority() const;
     bool priority(int value);
-#ifdef ESP32
+#ifdef ESP_PLATFORM
     int affinity() const;
 #endif
     bool start();
@@ -48,7 +48,7 @@ public:
     bool running() const; 
     void* handle() const;
     static thread create(void(*fn)(void*),void* state=nullptr,int priority=1,size_t stack_word_size=1000);
-#ifdef ESP32
+#ifdef ESP_PLATFORM
     static thread create_affinity(int cpu,void(*fn)(void*),void* state=nullptr,int priority=1,size_t stack_word_size=1000);
 #endif
 };

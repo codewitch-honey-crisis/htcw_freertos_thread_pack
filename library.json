@@ -1,6 +1,6 @@
 {
     "name": "htcw_freertos_thread_pack",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Provides support for simple threading using FreeRTOS",
     "keywords": ["thread","threading","message","queue"],
     "authors": {
